@@ -1,6 +1,6 @@
 import logging
 from telegram import Update
-from telegram.ext import CommandHandler, Updater, CallbackContext
+from telegram.ext import Updater, CommandHandler, CallbackContext
 
 print('Starting up bot...')
 
@@ -40,7 +40,7 @@ def restart_command(update: Update, context: CallbackContext):
 
 # Run the program
 if __name__ == '__main__':
-    updater = Updater(token=TOKEN, use_context=True)
+    updater = Updater(TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
     # Commands
